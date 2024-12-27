@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Simple Sidebar - Start Bootstrap Template</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <th:block layout:fragment="script"></th:block>
+        <th:block layout:fragment="css"></th:block>
+    </head>
+    <body>
+        <div class="d-flex" id="wrapper">
+            <!-- 사이드바(조각)-원본을 이동시킨 파일 및 위치를 지정 -->
+            <div  th:replace="~{fragments/sidebar::sidebar}" class="border-end bg-white" id="sidebar-wrapper"></div>
+
+            <!-- 페이지 본문-->
+            <div id="page-content-wrapper">
+                <!-- 메인메뉴 (조각)-->
+                <nav th:replace="~{fragments/menu::menu}" class="navbar navbar-expand-lg navbar-light bg-light border-bottom"></nav>
+
+                <!--페이지 작업(index.html 및 작업영역)-->
+                <div layout:fragment="content" class="container-fluid"><div>
+
+            </div>
+        </div><!--전체 화면 구성-->
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- CSS : HTML의 모양을 꾸미는 작업(크기, 색상, 글꼴, 정렬) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- script src = "주소"-->
+    <!-- JavaScript : HTML의 동작(애니메이션) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<!--이동한 곳에 조각이름을 지정-->
+<div th:fragment="sidebar" class="border-end bg-white" id="sidebar-wrapper">
+    <div class="sidebar-heading border-bottom bg-light">Start Bootstrap</div>
+    <div class="list-group list-group-flush">
+        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Dashboard</a>
+        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Shortcuts</a>
+        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Overview</a>
+        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Events</a>
+        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Profile</a>
+        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Status</a>
+    </div>
+</div>
+
+</body>
+</html>
